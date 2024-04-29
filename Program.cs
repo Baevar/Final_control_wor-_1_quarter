@@ -39,3 +39,19 @@ string[] resultArrayString(string[] inputArrayString, int count)
     }
     return result;
 }
+
+// Функция выводит на экран массив строк
+void printArrayString(string[] arrayStr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arrayStr.Length; i++)
+    {
+        if (i + 1 == arrayStr.Length)
+            Console.Write($"\"{arrayStr[i]}\"");
+        else
+        {
+            Console.Write($"\"{arrayStr[i]}\", ");
+        }
+    }
+    Console.Write("]");
+}
