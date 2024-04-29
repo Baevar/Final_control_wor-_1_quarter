@@ -9,3 +9,17 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 
+// функция вычисляет, сколько строк массива удовлетворяет требованиям задания и возвращает количество этих строк
+int numberRequiredString(string[] inputArrayString) 
+{
+    int count = 0;
+    foreach (string str in inputArrayString)
+    {
+        if (str.Length <= 3)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
