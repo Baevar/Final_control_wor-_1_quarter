@@ -55,3 +55,12 @@ void printArrayString(string[] arrayStr)
     }
     Console.Write("]");
 }
+
+string[] array = ["Russia", "Denmark", "Florida", "123", "Hello", "2", "world", ":-)"];
+
+int count = numberRequiredString(array);
+
+string[] result = resultArrayString(array, count);
+printArrayString(array);
+Console.Write(" → ");
+printArrayString(result);
