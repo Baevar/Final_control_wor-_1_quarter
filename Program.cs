@@ -23,3 +23,19 @@ int numberRequiredString(string[] inputArrayString)
     return count;
 }
 
+
+// Функция формирует из имеющегося массива строк новый массив из строк, длина которых меньше, либо равна 3 символам.
+string[] resultArrayString(string[] inputArrayString, int count)
+{
+    string[] result = new string[count];
+    count = 0;
+    foreach (string str in inputArrayString)
+    {
+        if (str.Length <= 3)
+        {
+            result[count] = str;
+            count++;
+        }
+    }
+    return result;
+}
