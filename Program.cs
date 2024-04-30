@@ -10,9 +10,10 @@
 
 
 // функция вычисляет, сколько строк массива удовлетворяет требованиям задания и возвращает количество этих строк
-int numberRequiredString(string[] inputArrayString) 
+int numberRequiredString(string[] inputArrayString)
 {
     int count = 0;
+
     foreach (string str in inputArrayString)
     {
         if (str.Length <= 3)
@@ -29,6 +30,7 @@ string[] resultArrayString(string[] inputArrayString, int count)
 {
     string[] result = new string[count];
     count = 0;
+
     foreach (string str in inputArrayString)
     {
         if (str.Length <= 3)
@@ -47,7 +49,9 @@ void printArrayString(string[] arrayStr)
     for (int i = 0; i < arrayStr.Length; i++)
     {
         if (i + 1 == arrayStr.Length)
+        {
             Console.Write($"\"{arrayStr[i]}\"");
+        }
         else
         {
             Console.Write($"\"{arrayStr[i]}\", ");
@@ -61,6 +65,7 @@ string[] array = ["Russia", "Denmark", "Florida", "123", "Hello", "2", "world", 
 int count = numberRequiredString(array);
 
 string[] result = resultArrayString(array, count);
+
 printArrayString(array);
 Console.Write(" → ");
 printArrayString(result);
